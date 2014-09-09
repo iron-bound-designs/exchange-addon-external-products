@@ -16,7 +16,7 @@ Domain: ibd-exchange-addon-external-products
 function ite_epa_register_addon() {
 
 	$options = array(
-		'name'        => __( 'External', ITE_EPA::SLUG ),
+		'name'        => __( 'External Products', ITE_EPA::SLUG ),
 		'description' => __( 'Sell products on other sites', ITE_EPA::SLUG ),
 		'author'      => 'Iron Bound Designs',
 		'author_url'  => 'http://www.ironbounddesigns.com',
