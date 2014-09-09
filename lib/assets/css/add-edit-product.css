@@ -1,0 +1,35 @@
+#it-exchange-product-external {
+	margin-bottom: 30px;
+	clear: both;
+	max-width: 600px;
+}
+
+#it-exchange-product-external input {
+	font-size: 16px;
+}
+
+#it-exchange-product-external.sections-wrapper {
+	background: #ffffff;
+	border: 1px solid #dfdfdf;
+}
+
+#it-exchange-product-external .external-section {
+	padding: 20px;
+}
+
+#it-exchange-product-external .external-section {
+	border-bottom: 1px solid #dfdfdf;
+}
+
+#it-exchange-product-external .external-section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#it-exchange-product-external .external-section input[type="button"] {
+	width: auto;
+	font-size: 1em;
+	padding: 0 10px 1px;
+	margin-top: 1em;
+}
