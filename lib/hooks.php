@@ -118,3 +118,27 @@ function ite_epa_override_payment_button( $button, $options ) {
 }
 
 add_filter( 'it_exchange_theme_api_product_buy_now', 'ite_epa_override_payment_button', 10, 2 );
+
+/**
+ * Disable the multi-item cart when we are viewing an external product.
+ *
+ * @param $allowed bool
+ *
+ * @return bool
+ */
+function ite_epa_disable_multi_item_cart_on_external_product( $allowed ) {
+
+	if ( ! isset( $GLOBALS['it_exchange']['product'] ) ) {
+		return $allowed;
+	}
+
+	$product = $GLOBALS['it_exchange']['product'];
+
+	if ( ! it_exchange_product_has_feature( $product->ID, 'external-product' ) ) {
+		return $allowed;
+	}
+
+	return false;
+}
+
+add_filter( 'it_exchange_multi_item_cart_allowed', 'ite_epa_disable_multi_item_cart_on_external_product', 15 );
