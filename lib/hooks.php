@@ -118,3 +118,28 @@ function ite_epa_override_payment_button( $button, $options ) {
 }
 
 add_filter( 'it_exchange_theme_api_product_buy_now', 'ite_epa_override_payment_button', 10, 2 );
+
+/**
+ * Hide the add to cart button.
+ *
+ * @param $button string
+ * @param $options array
+ *
+ * @return string
+ */
+function ite_epa_hide_add_to_cart_button( $button, $options ) {
+
+	$product = $GLOBALS['it_exchange']['product'];
+
+	if ( empty( $product ) ) {
+		return $button;
+	}
+
+	if ( ! it_exchange_product_has_feature( $product->ID, 'external-product' ) ) {
+		return $button;
+	}
+
+	return '';
+}
+
+add_filter( 'it_exchange_theme_api_product_add_to_cart', 'ite_epa_hide_add_to_cart_button', 10, 2 );
