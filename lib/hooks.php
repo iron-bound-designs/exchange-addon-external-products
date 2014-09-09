@@ -120,26 +120,25 @@ function ite_epa_override_payment_button( $button, $options ) {
 add_filter( 'it_exchange_theme_api_product_buy_now', 'ite_epa_override_payment_button', 10, 2 );
 
 /**
- * Hide the add to cart button.
+ * Disable the multi-item cart when we are viewing an external product.
  *
- * @param $button string
- * @param $options array
+ * @param $allowed bool
  *
- * @return string
+ * @return bool
  */
-function ite_epa_hide_add_to_cart_button( $button, $options ) {
+function ite_epa_disable_multi_item_cart_on_external_product( $allowed ) {
+
+	if ( ! isset( $GLOBALS['it_exchange']['product'] ) ) {
+		return $allowed;
+	}
 
 	$product = $GLOBALS['it_exchange']['product'];
 
-	if ( empty( $product ) ) {
-		return $button;
-	}
-
 	if ( ! it_exchange_product_has_feature( $product->ID, 'external-product' ) ) {
-		return $button;
+		return $allowed;
 	}
 
-	return '';
+	return false;
 }
 
-add_filter( 'it_exchange_theme_api_product_add_to_cart', 'ite_epa_hide_add_to_cart_button', 10, 2 );
+add_filter( 'it_exchange_multi_item_cart_allowed', 'ite_epa_disable_multi_item_cart_on_external_product', 15 );
