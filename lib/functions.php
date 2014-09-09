@@ -97,7 +97,7 @@ function ite_epa_get_product_purchases( $product_id ) {
  */
 function ite_epa_get_customer_purchases( $customer_id ) {
 
-	$purchases = (array) get_user_meta( $customer_id, '_it_exchange_external_product_purchases', true );
+	$purchases = (array) get_user_meta( $customer_id, 'it_exchange_epa_customer_purchases', true );
 
 	/**
 	 * Allows modification of the customer's purchases.
@@ -156,7 +156,6 @@ function ite_epa_add_product_purchase( $product_id, $customer = null, $time = nu
 		$customer_purchases[] = $purchase;
 
 		update_user_meta( $customer, 'it_exchange_epa_customer_purchases', $customer_purchases );
-
 	}
 
 	/**
