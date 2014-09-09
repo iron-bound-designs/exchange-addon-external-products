@@ -19,6 +19,9 @@ Customize the outgoing URL and Purchase Button text for each product.
 External Products will automatically keep track of both the total number, and who clicked the purchase button of each external product.
 
 
+
+Icon made by [Freepik](http://www.freepik.com) from [>www.flaticon.com](http://www.flaticon.com) is licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+
 == Installation ==
 
 1. Download and unzip the latest release zip file.
@@ -27,6 +30,8 @@ External Products will automatically keep track of both the total number, and wh
 4. Activate the plugin through the 'Plugins' menu in WordPress Administration.
 
 == Changelog ==
+= 0.9 =
+* ADD: List of external products purchased for each user
 
 = 0.8 =
 * Initial Release, not yet ready for Prime Time
