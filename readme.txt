@@ -18,10 +18,6 @@ Customize the outgoing URL and Purchase Button text for each product.
 
 External Products will automatically keep track of both the total number, and who clicked the purchase button of each external product.
 
-
-
-Icon made by [Freepik](http://www.freepik.com) from [>www.flaticon.com](http://www.flaticon.com) is licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
-
 == Installation ==
 
 1. Download and unzip the latest release zip file.
