@@ -20,6 +20,8 @@ function ite_epa_register_addon() {
 		'description' => __( 'Sell products on other sites', ITE_EPA::SLUG ),
 		'author'      => 'Iron Bound Designs',
 		'author_url'  => 'http://www.ironbounddesigns.com',
+		'icon'        => ITE_EPA::$url . 'lib/assets/images/icon-50x50.png',
+		'wizard-icon' => ITE_EPA::$url . 'lib/assets/images/wizard-icon.png',
 		'file'        => dirname( __FILE__ ) . '/init.php',
 		'category'    => 'product-type',
 		'basename'    => plugin_basename( __FILE__ ),
