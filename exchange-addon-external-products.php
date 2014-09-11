@@ -81,6 +81,7 @@ class ITE_EPA {
 	 */
 	public function scripts_and_styles() {
 		wp_register_style( 'ite-epa-add-edit-product', self::$url . 'lib/assets/css/add-edit-product.css' );
+		wp_register_script( 'ite-epa-add-edit-product', self::$url . 'lib/assets/js/add-edit-product.js' );
 	}
 
 	/**

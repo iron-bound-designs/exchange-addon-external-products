@@ -31,22 +31,33 @@ class ITE_EPA_Product_Feature extends IT_Exchange_Product_Feature_Abstract {
 	 */
 	function print_metabox( $post ) {
 		wp_enqueue_style( 'ite-epa-add-edit-product' );
+		wp_enqueue_script( 'ite-epa-add-edit-product' );
 
 		$data = it_exchange_get_product_feature( isset( $post->ID ) ? $post->ID : 0, $this->slug );
 		?>
+
+		<label class="metabox-title">
+			<?php _e( "Vendors", ITE_EPA::SLUG ); ?>
+			<span class="tip" title="Each...">i</span>
+		</label>
+		<div class="external-add-new">
+			<a href="" class="button" id="external-add-new"><?php _e( "Add New Vendor", ITE_EPA::SLUG ); ?></a>
+		</div>
 		<div class="sections-wrapper" id="it-exchange-product-external">
-			<div class="external-section">
-				<label for="external-product-url"><?php _e( "Purchase URL", ITE_EPA::SLUG ); ?></label>
-				<input type="url" id="external-product-url" name="external_product[url]" value="<?php echo esc_attr( esc_url( $data['url'] ) ); ?>">
+			<div class="external-section external-vendor-section">
+				<div class="external-field-container-left">
+					<label for="external-product-url"><?php _e( "Purchase URL", ITE_EPA::SLUG ); ?></label>
+					<input type="url" id="external-product-url" name="external_product[url][]" value="<?php echo esc_attr( esc_url( $data['url'] ) ); ?>">
 
-				<p><?php _e( "This is where buyers will be redirected to when they \"purchase\" this product.", ITE_EPA::SLUG ); ?></p>
-			</div>
+					<p><?php _e( "This is where buyers will be redirected to when they \"purchase\" this product.", ITE_EPA::SLUG ); ?></p>
+				</div>
 
-			<div class="external-section">
-				<label for="external-product-button-text"><?php _e( "Purchase button text", ITE_EPA::SLUG ); ?></label>
-				<input type="text" id="external-product-button-text" name="external_product[button_text]" value="<?php echo esc_attr( $data['button_text'] ); ?>">
+				<div class="external-field-container-right">
+					<label for="external-product-button-text"><?php _e( "Purchase button text", ITE_EPA::SLUG ); ?></label>
+					<input type="text" id="external-product-button-text" name="external_product[button_text][]" value="<?php echo esc_attr( $data['button_text'] ); ?>">
 
-				<p><?php _e( "This replaces the Buy Now button on the product page", ITE_EPA::SLUG ); ?></p>
+					<p><?php _e( "This replaces the Buy Now button on the product page", ITE_EPA::SLUG ); ?></p>
+				</div>
 			</div>
 		</div>
 	<?php
