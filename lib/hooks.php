@@ -15,7 +15,7 @@
  */
 function ite_epa_override_purchase_count_in_admin( $column ) {
 	if ( $column == 'it_exchange_product_purchases' ) {
-		if ( ! has_filter( 'it_exchange_get_transactions_for_product', 'ite_epa_override_transactions_for_product_in_admin', 10, 2 ) ) {
+		if ( ! has_filter( 'it_exchange_get_transactions_for_product', 'ite_epa_override_transactions_for_product_in_admin' ) ) {
 			add_filter( 'it_exchange_get_transactions_for_product', 'ite_epa_override_transactions_for_product_in_admin', 10, 2 );
 		}
 	}
@@ -42,7 +42,7 @@ function ite_epa_override_transactions_for_product_in_admin( $transactions, $pro
 		}
 	}
 
-	remove_filter( 'it_exchange_get_transactions_for_product', 'ite_epa_override_transactions_for_product_in_admin', 10, 2 );
+	remove_filter( 'it_exchange_get_transactions_for_product', 'ite_epa_override_transactions_for_product_in_admin', 10 );
 
 	return $transactions;
 }
