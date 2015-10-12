@@ -3,7 +3,7 @@
 Plugin Name: iThemes Exchange External Products Add-on
 Plugin URI: http://www.ironbounddesigns.com
 Description: iThemes Exchange add-on that adds an external product type.
-Version: 0.9
+Version: 0.9.1
 Author: Iron Bound Designs
 Author URI: http://www.ironbounddesigns.com
 License: GPL v2
