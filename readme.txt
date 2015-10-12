@@ -3,8 +3,8 @@ Contributors: TimothyBlynJacobs
 Donate link: http://ironbounddesigns.com/
 Tags: iThemes Exchange, addon, ecommerce, external, affiliate
 Requires at least: 4.0
-Tested up to: 4.0
-Stable tag: 0.9
+Tested up to: 4.3
+Stable tag: 0.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,10 @@ External Products will automatically keep track of both the total number, and wh
 4. Activate the plugin through the 'Plugins' menu in WordPress Administration.
 
 == Changelog ==
+
+= 0.9.1 =
+* Fix: Use correct parent constructor call.
+
 = 0.9 =
 * ADD: List of external products purchased for each user
 
