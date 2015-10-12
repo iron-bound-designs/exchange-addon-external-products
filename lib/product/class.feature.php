@@ -1,16 +1,17 @@
 <?php
 
 /**
- * File Description
+ * External products product feature.
  *
  * @author timothybjacobs
  * @since  9/5/14
  */
 class ITE_EPA_Product_Feature extends IT_Exchange_Product_Feature_Abstract {
+
 	/**
 	 * Setup our product feature.
 	 */
-	function __construct() {
+	public function __construct() {
 		$args = array(
 			'slug'             => 'external-product',
 			'description'      => 'Specify URL and output for the External Products Add-on',
@@ -20,7 +21,7 @@ class ITE_EPA_Product_Feature extends IT_Exchange_Product_Feature_Abstract {
 			'metabox_priority' => 'low',
 		);
 
-		parent::IT_Exchange_Product_Feature_Abstract( $args );
+		parent::__construct( $args );
 	}
 
 	/**
